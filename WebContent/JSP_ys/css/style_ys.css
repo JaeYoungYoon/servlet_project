@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+
+#clock {
+	font-size: 15px;
+	font-weight: bold;
+	text-align: left;
+	color: #EEE;
+}
+
+.AREA {
+	background-color: #000;
+	color: #FFF;
+	text-align: center;
+	padding: 20px;
+}
+
+.TEAMWORK {
+	background-color: #EEE;
+	color: #000;
+	text-align: center;
+	height: calc(100vh - 200px);
+}
+
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #FFF;
+	color: #000;
+	text-align: center;
+	padding: 20px;
+}
