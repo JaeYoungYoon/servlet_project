@@ -1,18 +1,18 @@
-//í›„ë³´ì¡°íšŒ
+//ÈÄº¸Á¶È¸
 
 package servlet_vote.VO;
 
 public class CandidateCheckVO {
-	private int cno;//í›„ë³´ë²ˆí˜¸
-	private String cname;//ì„±ëª…
-	private String party;//ì†Œì†ì •ë‹¹
-	private String level;//í•™ë ¥
-	private String regino;//ì£¼ë¯¼ë²ˆí˜¸
-	private String resident;//ì§€ì—­êµ¬
-	private int keyno;//ëŒ€í‘œë²ˆí˜¸
-	
+	private int cno;//ÈÄº¸¹øÈ£
+	private String cname;//¼º¸í
+	private String party;//¼Ò¼ÓÁ¤´ç
+	private String level;//ÇĞ·Â
+	private String regino;//ÁÖ¹Î¹øÈ£
+	private String resident;//Áö¿ª±¸
+	private int keyno;//´ëÇ¥ÀüÈ­
+
 	public CandidateCheckVO() {
-		
+
 	}
 
 	public CandidateCheckVO(int cno, String cname, String party, String level, String regino, String resident,
@@ -82,6 +82,5 @@ public class CandidateCheckVO {
 	public void setKeyno(int keyno) {
 		this.keyno = keyno;
 	}
-	
-	
+
 }
