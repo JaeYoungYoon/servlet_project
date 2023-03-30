@@ -35,7 +35,7 @@ public class VoteCheckDAO {
 
 		try {
 			String sql = "select * from VoteCheck";
-			// con = DriverManager.getConnection(url, uid, upw);
+			
 			con = dataSource.getConnection();
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(sql);

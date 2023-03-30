@@ -36,7 +36,7 @@ public class CandidateCheckDAO {
 
 		try {
 			String sql = "select * from CandidateCheck";
-			// con = DriverManager.getConnection(url, uid, upw);
+
 			con = dataSource.getConnection();
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(sql);

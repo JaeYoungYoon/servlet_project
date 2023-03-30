@@ -35,7 +35,7 @@ public class CandidateRankDAO {
 
 		try {
 			String sql = "select * from CandidateRank";
-			// con = DriverManager.getConnection(url, uid, upw);
+			
 			con = dataSource.getConnection();
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(sql);

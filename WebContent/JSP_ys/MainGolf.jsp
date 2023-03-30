@@ -7,12 +7,12 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="stylesheet"	href="./css/style_ys.css" />
+<link rel="stylesheet" href="./css/style_ys.css" />
 </head>
 
 <body>
 
-<%@ include file="top.jsp" %>
+	<%@ include file="top.jsp"%>
 
 
 	<section>
@@ -28,6 +28,6 @@
 	</section>
 
 
-<%@ include file="bottom.jsp" %>
+	<%@ include file="bottom.jsp"%>
 </body>
 </html>
