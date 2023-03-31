@@ -14,7 +14,7 @@
 			<li><a href="vote.jsp">투표하기</a></li>
 			<li><a href="resultcheck.jsp">투표점수조회</a></li>
 			<li><a href="grade.jsp">후보자등수</a></li>
-			<li><a href="main.jsp">홈으로</a></li>
+			<li><a href="index.jsp">홈으로</a></li>
 		</ul>
 	</nav>
 </body>
