@@ -13,8 +13,8 @@
 	<%@ include file="topmenu.jsp"%>
 	<section>
 		<div class="title">홈쇼핑 회원 등록</div>
-		<form name="form" action="insert" method="get">
-			<input type="hidden" id="GUBUN" value="insert">
+		<form name="form" action="insert.do" method="get">
+			<input type="hidden" id="GUBUN" value="">
 			<div class="wrapper">
 				<table>
 					<tr>

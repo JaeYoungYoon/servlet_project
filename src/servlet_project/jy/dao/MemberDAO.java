@@ -44,14 +44,7 @@ public class MemberDAO {
 			resultSet = preparedStatement.executeQuery();
 
 			while (resultSet.next()) {
-				/*	private int custno;
-					private String custname;
-					private String phone;
-					private String address;
-					private Timestamp joindate;
-					private String grade;
-					private String city;*/
-
+	
 				int custno = resultSet.getInt("custno");
 				String custname = resultSet.getString("custname");
 				String phone = resultSet.getString("phone");

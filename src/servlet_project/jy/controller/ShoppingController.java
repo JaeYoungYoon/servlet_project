@@ -15,7 +15,7 @@ import servlet_project.jy.command.SListCommand;
 /**
  * Servlet implementation class ShoppingController
  */
-@WebServlet("JSP_jy/*.do")
+@WebServlet("*.do")
 public class ShoppingController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -51,13 +51,19 @@ public class ShoppingController extends HttpServlet {
 		String contextPath = request.getContextPath();
 		String com = uri.substring(contextPath.length());
 		
-		System.out.println("command : "+ com);
-		
-		if(com.contains("main.do")) {
+		if(com.contains("/JSP_jy/main.do")) {
 			System.out.println("uri : "+ uri);
 			System.out.println("contextPath : " + contextPath);
 			System.out.println("command : "+ com);
-			viewPage = "JSP_jy/main.jsp";
+			viewPage = "/JSP_jy/main.jsp";
+		}else if (com.contains("/JSP_jy/list.do")) {
+			System.out.println("uri : "+ uri);
+			System.out.println("contextPath : " + contextPath);
+			System.out.println("command : "+ com);
+			
+			command = new SListCommand();
+			command.execute(request, response);
+			viewPage = "/JSP_jy/list.jsp";
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
