@@ -1,25 +1,28 @@
 package servlet_project.jy.controller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import servlet_project.jy.command.BCommand;
+import servlet_project.jy.command.SCommand;
+import servlet_project.jy.command.SListCommand;
 
 /**
- * Servlet implementation class BoardController
+ * Servlet implementation class ShoppingController
  */
-@WebServlet("/.do")
-public class BoardController extends HttpServlet {
+@WebServlet("JSP_jy/*.do")
+public class ShoppingController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public BoardController() {
+    public ShoppingController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,23 +31,37 @@ public class BoardController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGet() ... ");
+		actionDo(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doPost() ... ");
+		actionDo(request, response);
 	}
 
 	private void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("actionDo() ... ");
-		
 		request.setCharacterEncoding("UTF-8");
-		
+
 		String viewPage = null;
-		BCommand command = null; 
+		SCommand command = null;
+
+		String uri = request.getRequestURI();
+		String contextPath = request.getContextPath();
+		String com = uri.substring(contextPath.length());
+		
+		System.out.println("command : "+ com);
+		
+		if(com.contains("main.do")) {
+			System.out.println("uri : "+ uri);
+			System.out.println("contextPath : " + contextPath);
+			System.out.println("command : "+ com);
+			viewPage = "JSP_jy/main.jsp";
+		}
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
+		dispatcher.forward(request, response);
 	}
-	
+
 }
