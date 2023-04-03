@@ -12,6 +12,7 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 import servlet_project.jy.vo.MemberVO;
+import servlet_project.jy.vo.MoneyVO;
 
 public class MemberDAO {
 	private DataSource dataSource;
@@ -78,6 +79,55 @@ public class MemberDAO {
 		return boards;
 	}
 	
+	/* show Money */
 	
+	public List<MoneyVO> showMoney(){
+		List<MoneyVO> boards = new ArrayList<MoneyVO>();
+		
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+
+		try {
+
+			String query = "select * from money_tbl_02";
+
+			connection = dataSource.getConnection();
+			preparedStatement = connection.prepareStatement(query);
+			resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+
+				int custno = resultSet.getInt("custno");
+				int salenol = resultSet.getInt("salenol");
+				int pcost = resultSet.getInt("pcost");
+				int amount = resultSet.getInt("amount");
+				int price = resultSet.getInt("price");
+				String pcode = resultSet.getString("pcode");
+				Timestamp sdate = resultSet.getTimestamp("sdate");
+			
+				MoneyVO vo = new MoneyVO(custno, salenol, pcost, amount, price, pcode, sdate);
+				boards.add(vo);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (resultSet != null)
+					resultSet.close();
+				if (preparedStatement != null)
+					preparedStatement.close();
+				if (connection != null)
+					connection.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}
+		
+		return boards;
+	}
 	
 }

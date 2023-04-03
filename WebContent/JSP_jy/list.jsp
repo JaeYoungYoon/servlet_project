@@ -15,29 +15,34 @@
 		<div class="title">쇼핑몰 회원관리 프로그램</div>
 		<div class="wrapper">
 			<table>
-				<tr>
-					<td>회원번호</td>
-					<td>회원성명</td>
-					<td>회원전화</td>
-					<td>회원주소</td>
-					<td>가입일자</td>
-					<td>고객등급</td>
-					<td>도시코드</td>
-				</tr>
-				<c:forEach var="board" items="${boards}">
+				<thead>
 					<tr>
-						<td>${board.custno}</td>
-						<td>${board.custname}</td>
-						<td>${board.phone}</td>
-						<td>${board.address}</td>
-						<td>${board.joindate}</td>
-						<td>${board.grade}</td>
-						<td>${board.city}</td>
+						<th>회원번호</th>
+						<th>회원성명</th>
+						<th>회원전화</th>
+						<th>회원주소</th>
+						<th>가입일자</th>
+						<th>고객등급</th>
+						<th>도시코드</th>
 					</tr>
-				</c:forEach>
-				<tr>
-					<td colspan="7"><a href="write_view.do">글작성</a></td>
-				</tr>
+				</thead>
+				<tbody>
+					<c:forEach var="board" items="${boards}">
+						<tr>
+							<td>${board.custno}</td>
+							<td>${board.custname}</td>
+							<td>${board.phone}</td>
+							<td>${board.address}</td>
+							<td>${board.joindate}</td>
+							<td>${board.grade}</td>
+							<td>${board.city}</td>
+						</tr>
+					</c:forEach>
+					<tr>
+						<td colspan="7"><button class="btn" type="button"
+								onclick="location='writer_view.do'">글 작성하기</button></td>
+					</tr>
+				</tbody>
 			</table>
 		</div>
 	</section>

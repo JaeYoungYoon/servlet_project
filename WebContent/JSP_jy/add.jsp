@@ -49,7 +49,7 @@
 						<td colspan="2">
 							<button class="btn" type="submit"
 								onclick="fn_submit(); return false;">등록하기</button>
-							<button class="btn" type="button" onclick="location='list.jsp'">조회하기</button>
+							<button class="btn" type="button" onclick="location='list.do'">조회하기</button>
 						</td>
 					</tr>
 				</table>

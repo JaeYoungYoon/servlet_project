@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import servlet_project.jy.command.SCommand;
 import servlet_project.jy.command.SListCommand;
+import servlet_project.jy.command.SResultCommand;
 
 /**
  * Servlet implementation class ShoppingController
@@ -64,6 +65,20 @@ public class ShoppingController extends HttpServlet {
 			command = new SListCommand();
 			command.execute(request, response);
 			viewPage = "/JSP_jy/list.jsp";
+		}else if(com.contains("/JSP_jy/writer_view.do")) {
+			System.out.println("uri : "+ uri);
+			System.out.println("contextPath : " + contextPath);
+			System.out.println("command : "+ com);
+			
+			viewPage = "/JSP_jy/add.jsp";
+		}else if(com.contains("/JSP_jy/result.do")) {
+			System.out.println("uri : "+ uri);
+			System.out.println("contextPath : " + contextPath);
+			System.out.println("command : "+ com);
+			
+			command = new SResultCommand();
+			command.execute(request, response);
+			viewPage = "/JSP_jy/result.jsp";
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
