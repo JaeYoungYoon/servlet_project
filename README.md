@@ -1,7 +1,7 @@
 # servlet_project
 참여자 : 윤재영 이희복 조유성
 
-~ front ~
+~ FrontEnd - View ~
 프로젝트 폴더
 - index.jsp (프로젝트 접속)
 
@@ -19,7 +19,7 @@
 
 ======================
 
-~ back ~
+~ BackEnd - Server ~
 (데이터베이스를 다루는 VO, DAO 정리)
 
 투표
