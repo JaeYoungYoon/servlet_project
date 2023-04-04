@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import servlet_project.jy.command.SCommand;
+import servlet_project.jy.command.SInsertCommand;
 import servlet_project.jy.command.SListCommand;
 import servlet_project.jy.command.SResultCommand;
 
@@ -79,8 +80,15 @@ public class ShoppingController extends HttpServlet {
 			command = new SResultCommand();
 			command.execute(request, response);
 			viewPage = "/JSP_jy/result.jsp";
+		}else if(com.contains("/JSP_jy/insert.do")) {
+			System.out.println("uri : "+ uri);
+			System.out.println("contextPath : " + contextPath);
+			System.out.println("command : "+ com);
+			
+			command = new SInsertCommand();
+			command.execute(request, response);
+			viewPage = "/JSP_jy/list.jsp";
 		}
-		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 	}
