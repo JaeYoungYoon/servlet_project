@@ -87,7 +87,7 @@ public class ShoppingController extends HttpServlet {
 			
 			command = new SInsertCommand();
 			command.execute(request, response);
-			viewPage = "/JSP_jy/list.jsp";
+			viewPage = "/JSP_jy/list.do";
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);

@@ -14,13 +14,8 @@
 	<section>
 		<div class="title">홈쇼핑 회원 등록</div>
 		<form name="form" action="insert.do" method="get">
-			<input type="hidden" id="GUBUN" value="">
 			<div class="wrapper">
 				<table>
-					<tr>
-						<th>회원번호(자동발생)</th>
-						<td><input name="custno" value="" readonly value="1"></td>
-					</tr>
 					<tr>
 						<th>회원성명</th>
 						<td><input type="text" name="custname"></td>
@@ -34,10 +29,6 @@
 						<td><input type="text" name="address"></td>
 					</tr>
 					<tr>
-						<th>가입일자</th>
-						<td><input type="text" name="joindate"></td>
-					</tr>
-					<tr>
 						<th>고객등급[A:VIP,B:일반,C:직원]</th>
 						<td><input type="text" name="grade"></td>
 					</tr>
@@ -47,8 +38,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<button class="btn" type="submit"
-								onclick="fn_submit(); return false;">등록하기</button>
+							<button class="btn" type="submit">등록하기</button>
 							<button class="btn" type="button" onclick="location='list.do'">조회하기</button>
 						</td>
 					</tr>

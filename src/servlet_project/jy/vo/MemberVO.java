@@ -19,7 +19,7 @@ public class MemberVO {
 	private String custname;
 	private String phone;
 	private String address;
-	private Timestamp joindate;
+	private String joindate;
 	private String grade;
 	private String city;
 	
@@ -27,7 +27,7 @@ public class MemberVO {
 	public MemberVO() {}
 	
 	/* constructor using fields */
-	public MemberVO(int custno, String custname, String phone, String address, Timestamp joindate, String grade,
+	public MemberVO(int custno, String custname, String phone, String address, String joindate, String grade,
 			String city) {
 		super();
 		this.custno = custno;
@@ -65,10 +65,10 @@ public class MemberVO {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public Timestamp getJoindate() {
+	public String getJoindate() {
 		return joindate;
 	}
-	public void setJoindate(Timestamp joindate) {
+	public void setJoindate(String joindate) {
 		this.joindate = joindate;
 	}
 	public String getGrade() {

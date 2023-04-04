@@ -56,7 +56,7 @@ section {
 	margin: 0 2rem;
 }
 
-.main ul li {
+.main > ul >li {
 	list-style: number;
 }
 

@@ -14,11 +14,6 @@ public class SInsertCommand implements SCommand{
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
 		
-		/*	custno : 자동발생
-		joindate : sysdate
-	private String grade;
-	private String city;*/
-		
 		String custname = request.getParameter("custname");
 		String phone = request.getParameter("phone");
 		String address = request.getParameter("address");
