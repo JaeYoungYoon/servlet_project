@@ -28,6 +28,11 @@
 - VoteCheck (VO, DAO)
 
 쇼핑몰
+- ShoppingController (Servlet)
+- MemberVO, MoneyVO
+- MemberDAO
+- SCommand (Command Interface)
+- SListCommand, SResultCommand
 
 골프장
 
