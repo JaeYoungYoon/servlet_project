@@ -88,7 +88,7 @@ public class MemberDAO {
 
 		try {
 
-			String query = "SELECT A.CUSTNO, A.CUSTNAME, A.GRADE, SUM(B.PRICE) AS TOTAL FROM MEMBER_TBL_02 A JOIN MONEY_TBL_02 B ON A.CUSTNO = B.CUSTNO GROUP BY(A.CUSTNO, A.CUSTNAME, A.GRADE) ORDER BY TOTAL DESC;";
+			String query = "SELECT A.CUSTNO, A.CUSTNAME, A.GRADE, SUM(B.PRICE) AS TOTAL FROM MEMBER_TBL_02 A JOIN MONEY_TBL_02 B ON A.CUSTNO = B.CUSTNO GROUP BY(A.CUSTNO, A.CUSTNAME, A.GRADE) ORDER BY TOTAL DESC";
 
 			connection = dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(query);
