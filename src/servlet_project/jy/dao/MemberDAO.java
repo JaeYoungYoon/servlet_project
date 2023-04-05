@@ -11,6 +11,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import servlet_project.jy.vo.MemberPriceVO;
 import servlet_project.jy.vo.MemberVO;
 import servlet_project.jy.vo.MoneyVO;
 
@@ -79,8 +80,8 @@ public class MemberDAO {
 	}
 
 	/* Show Money */
-	public List<MoneyVO> showMoney() {
-		List<MoneyVO> boards = new ArrayList<MoneyVO>();
+	public List<MemberPriceVO> showMoney() {
+		List<MemberPriceVO> boards = new ArrayList<MemberPriceVO>();
 
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
@@ -88,7 +89,7 @@ public class MemberDAO {
 
 		try {
 
-			String query = "SELECT A.CUSTNO, A.CUSTNAME, A.GRADE, SUM(B.PRICE) AS TOTAL FROM MEMBER_TBL_02 A JOIN MONEY_TBL_02 B ON A.CUSTNO = B.CUSTNO GROUP BY(A.CUSTNO, A.CUSTNAME, A.GRADE) ORDER BY TOTAL DESC";
+			String query = "SELECT mem.custno, mem.custname, mem.grade, sum(mon.price) price FROM member_tbl_02 mem, money_tbl_02 mon WHERE mem.custno = mon.custno GROUP BY mem.custno, mem.custname, mem.grade ORDER BY price DESC";
 
 			connection = dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(query);
@@ -97,14 +98,14 @@ public class MemberDAO {
 			while (resultSet.next()) {
 
 				int custno = resultSet.getInt("custno");
-				int salenol = resultSet.getInt("salenol");
-				int pcost = resultSet.getInt("pcost");
-				int amount = resultSet.getInt("amount");
+				String custname = resultSet.getString("custname");
+				String grade = resultSet.getString("grade");
+				if(grade.equals("A")) {grade = "VIP";}
+				else if(grade.equals("B")) {grade = "일반";}
+				else if(grade.equals("C")) {grade = "직원";}
 				int price = resultSet.getInt("price");
-				String pcode = resultSet.getString("pcode");
-				Timestamp sdate = resultSet.getTimestamp("sdate");
 
-				MoneyVO vo = new MoneyVO(custno, salenol, pcost, amount, price, pcode, sdate);
+				MemberPriceVO vo = new MemberPriceVO(custno, custname, grade, price);
 				boards.add(vo);
 			}
 
