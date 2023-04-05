@@ -17,7 +17,7 @@ import servlet_project.jy.command.SResultCommand;
 /**
  * Servlet implementation class ShoppingController
  */
-@WebServlet("*.do")
+@WebServlet("/JSP_jy/*.do")
 public class ShoppingController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
