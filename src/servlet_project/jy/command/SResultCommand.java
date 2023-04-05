@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import servlet_project.jy.dao.MemberDAO;
 import servlet_project.jy.vo.MemberPriceVO;
-import servlet_project.jy.vo.MoneyVO;
 
 public class SResultCommand implements SCommand{
 

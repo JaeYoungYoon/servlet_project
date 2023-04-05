@@ -3,7 +3,6 @@ package servlet_project.jy.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +12,6 @@ import javax.sql.DataSource;
 
 import servlet_project.jy.vo.MemberPriceVO;
 import servlet_project.jy.vo.MemberVO;
-import servlet_project.jy.vo.MoneyVO;
 
 public class MemberDAO {
 	private DataSource dataSource;
