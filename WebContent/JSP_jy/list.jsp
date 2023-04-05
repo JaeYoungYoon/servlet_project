@@ -38,10 +38,6 @@
 							<td>${board.city}</td>
 						</tr>
 					</c:forEach>
-					<tr>
-						<td colspan="7"><button class="btn" type="button"
-								onclick="location='writer_view.do'">글 작성하기</button></td>
-					</tr>
 				</tbody>
 			</table>
 		</div>
