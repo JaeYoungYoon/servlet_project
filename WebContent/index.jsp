@@ -11,9 +11,9 @@
 	<header> JSP Servlet Project </header>
 	<nav>
 		<ul>
-			<li><a href="./JSP_jy/main.jsp">윤재영</a></li>
+			<li><a href="./JSP_jy/main.do">윤재영</a></li>
 			<li><a href="./JSP_hb/index.jsp">이희복</a></li>
-			<li><a href="./JSP_ys/MainGolf.jsp">조유성</a></li>
+			<li><a href="./JYS/list.do">조유성</a></li>
 			<li><a href="index.jsp">홈으로</a></li>
 		</ul>
 	</nav>

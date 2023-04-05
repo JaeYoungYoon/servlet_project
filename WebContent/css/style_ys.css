@@ -1,11 +1,11 @@
 @charset 'UTF-8';
 
-#clock {
+/* #clock {
 	font-size: 15px;
 	font-weight: bold;
 	text-align: left;
 	color: #EEE;
-}
+} */
 
 .AREA {
 	background-color: #000;
@@ -20,6 +20,7 @@
 	text-align: center;
 	height: calc(100vh - 200px);
 }
+
 
 .footer {
 	position: fixed;
