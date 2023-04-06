@@ -13,66 +13,78 @@ import servlet_project.hb.command.VCcheckCommand;
 import servlet_project.hb.command.VCommand;
 import servlet_project.hb.command.VCrankCommand;
 import servlet_project.hb.command.VVcheckCommand;
+import servlet_project.hb.command.VoteCommand;
 
 /**
  * Servlet implementation class VoteController
  */
-@WebServlet(urlPatterns = {"/JSP_hb/index.do", "/JSP_hb/VCcheck.do", "/JSP_hb/VVcheck.do", "/JSP_hb/VCrank.do"})
+@WebServlet(urlPatterns = { "/JSP_hb/index.do", "/JSP_hb/VCcheck.do", "/JSP_hb/VVcheck.do", "/JSP_hb/VCrank.do", "/JSP_hb/Vote.do", "/JSP_hb/submit.do" })
 public class VoteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public VoteController() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		actionDo(request,response);
+	public VoteController() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		actionDo(request,response);
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		actionDo(request, response);
 	}
-	private void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		actionDo(request, response);
+	}
+
+	private void actionDo(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		System.out.println("actionDo() ..");
-		
+
 		request.setCharacterEncoding("UTF-8");
-		
+
 		String viewPage = null;
 		VCommand command = null;
-		
+
 		String uri = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String com = uri.substring(contextPath.length());
-		
-		if(com.contains("index.do")) {
+
+		if (com.contains("index.do")) {
 			viewPage = "index.jsp";
-		}
-		else if(com.contains("VCcheck.do")) {
+		} else if (com.contains("VCcheck.do")) {
 			command = new VCcheckCommand();
 			command.execute(request, response);
 			viewPage = "VCcheck.jsp";
-		}else if(com.contains("VVcheck.do")) {
+		} else if (com.contains("VVcheck.do")) {
 			command = new VVcheckCommand();
 			command.execute(request, response);
 			viewPage = "VVcheck.jsp";
-		}
-		else if(com.contains("VCrank.do")) {
+		} else if (com.contains("VCrank.do")) {
 			command = new VCrankCommand();
 			command.execute(request, response);
 			viewPage = "VCrank.jsp";
+		} else if (com.contains("Vote.do")) {
+			viewPage = "Vote.jsp";
+		} else if (com.contains("submit.do")) {
+			command = new VoteCommand();
+			command.execute(request, response);
+			viewPage = "index.do";
 		}
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 	}
-	
+
 }

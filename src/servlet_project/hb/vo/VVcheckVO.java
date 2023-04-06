@@ -3,7 +3,7 @@ package servlet_project.hb.vo;
 
 public class VVcheckVO {
 	private String v_name;
-	private String v_date;
+	private String v_birth;
 	private String v_age;
 	private String v_gender;
 	private String m_no;
@@ -14,11 +14,11 @@ public class VVcheckVO {
 		
 	}
 
-	public VVcheckVO(String v_name, String v_date, String v_age, String v_gender, String m_no, String v_time,
+	public VVcheckVO(String v_name, String v_birth, String v_age, String v_gender, String m_no, String v_time,
 			String v_confirm) {
 		super();
 		this.v_name = v_name;
-		this.v_date = v_date;
+		this.v_birth = v_birth;
 		this.v_age = v_age;
 		this.v_gender = v_gender;
 		this.m_no = m_no;
@@ -34,12 +34,12 @@ public class VVcheckVO {
 		this.v_name = v_name;
 	}
 
-	public String getV_date() {
-		return v_date;
+	public String getV_birth() {
+		return v_birth;
 	}
 
-	public void setV_date(String v_date) {
-		this.v_date = v_date;
+	public void setV_birth(String v_birth) {
+		this.v_birth = v_birth;
 	}
 
 	public String getV_age() {

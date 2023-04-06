@@ -1,23 +1,17 @@
+//<�닾�몴�븯湲�>
 package servlet_project.hb.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-
-import servlet_project.hb.vo.VCrankVO;
-
-
-public class VCrankDAO {
+public class VoteDAO {
 	private DataSource dataSource;
 
-	public VCrankDAO() {   
+	public VoteDAO() {   
 	      try {
 	         Context context = new InitialContext();
 	         dataSource = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
@@ -26,40 +20,32 @@ public class VCrankDAO {
 	      }
 	   }
 
-	public List<VCrankVO> list() {
-		List<VCrankVO> boards = new ArrayList<VCrankVO>();
+	public int list(String v_jumin, String v_name, String m_no, String v_time, String v_area, String v_confirm) {
 
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
-		ResultSet resultSet = null;
+		int rn = 0;
 		
 		try {
-			String query = "SELECT M.M_NO, M.M_NAME, COUNT(*) AS M_TOTAL FROM TBL_MEMBER_202005 M, TBL_VOTE_202005 V WHERE M.M_NO = V.M_NO AND V.V_CONFIRM = 'Y' GROUP BY M.M_NO, M.M_NAME ORDER BY M_TOTAL DESC";
+			String query = "INSERT INTO TBL_VOTE_202005(V_JUMIN, V_NAME, M_NO, V_TIME, V_AREA, V_CONFIRM) VALUES(?, ?, ?, ?, ?, ?)";
 
 			connection = dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(query);
-			resultSet = preparedStatement.executeQuery();
 
-			while (resultSet.next()) {
-				
-				
-				String m_no = resultSet.getString("m_no");
-				String m_name = resultSet.getString("m_name");
-				String m_total = resultSet.getString("m_total");
-				
-				VCrankVO vo = new VCrankVO(m_no, m_name, m_total);
-				boards.add(vo);
-
-			}
+			preparedStatement.setString(1, v_jumin);
+			preparedStatement.setString(2, v_name);
+			preparedStatement.setString(3, m_no);
+			preparedStatement.setString(4, v_time);
+			preparedStatement.setString(5, v_area);
+			preparedStatement.setString(6, v_confirm);
+			
+			rn = preparedStatement.executeUpdate();
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 
 			try {
-				if (resultSet != null)
-					resultSet.close();
-
 				if (preparedStatement != null)
 					preparedStatement.close();
 
@@ -72,7 +58,7 @@ public class VCrankDAO {
 			}
 		}
 
-		return boards;
+		return rn;
 
 	}
 }

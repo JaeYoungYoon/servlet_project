@@ -74,16 +74,26 @@ section {
 	text-align: center;
 }
 
+section h1{
+	margin:20px auto;
+	text-align:center;
+}
+
 table {
 	width: 800px;
 	cellspacing: 0;
 	cellpadding: 0;
+	margin : 20px auto;
 }
 
 table, tr, th, td {
 	border: 1px solid #333;
 	border-collapse: collapse;
 	padding: 0.7rem;
+}
+
+th, td{
+	text-align:center;
 }
 
 td input {

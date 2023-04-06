@@ -1,4 +1,3 @@
-//<후보조회>
 package servlet_project.hb.dao;
 
 import java.sql.Connection;
@@ -19,7 +18,7 @@ public class VCcheckDAO {
 	public VCcheckDAO() {   
 	      try {
 	         Context context = new InitialContext();
-	         dataSource = (DataSource) context.lookup("java:comp/env/jdbc/oracle1");
+	         dataSource = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
 	      } catch (Exception e) {
 	         e.printStackTrace();
 	      }
@@ -33,7 +32,7 @@ public class VCcheckDAO {
 		ResultSet resultSet = null;
 
 		try {
-			String query = "SELECT TBL_MEMBER_202005.M_NO,M_NAME,TBL_PARTY_202005.P_CODE, P_SCHOOL ,M_JUMIN,M_CITY,P_TEL1,P_TEL2,P_TEL3 FROM TBL_VOTE_202005, TBL_MEMBER_202005, TBL_PARTY_202005 WHERE TBL_VOTE_202005.M_NO = TBL_MEMBER_202005.M_NO AND TBL_MEMBER_202005.P_CODE = TBL_PARTY_202005.P_CODE";
+			String query = "SELECT TBL_MEMBER_202005.M_NO,M_NAME,TBL_PARTY_202005.P_CODE, DECODE(P_SCHOOL, '1', '고졸', '2', '학사', '3', '석사', '박사')P_SCHOOL ,M_JUMIN,M_CITY,P_TEL1,P_TEL2,P_TEL3 FROM TBL_MEMBER_202005, TBL_PARTY_202005 WHERE TBL_MEMBER_202005.P_CODE = TBL_PARTY_202005.P_CODE";
 
 			connection = dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(query);

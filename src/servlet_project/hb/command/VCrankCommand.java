@@ -6,12 +6,12 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import servlet_project.hb.dao.VCcheckDAO;
+
 import servlet_project.hb.dao.VCrankDAO;
-import servlet_project.hb.dao.VVcheckDAO;
-import servlet_project.hb.vo.VCcheckVO;
+
+
 import servlet_project.hb.vo.VCrankVO;
-import servlet_project.hb.vo.VVcheckVO;
+
 
 
 public class VCrankCommand implements VCommand {

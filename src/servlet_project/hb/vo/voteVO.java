@@ -1,23 +1,24 @@
+//<투표하기>
 package servlet_project.hb.vo;
 
-public class voteVO {
+public class VoteVO {
 	
 	private String v_jumin;
 	private String v_name;
-	private int v_no;//투표번호
+	private String m_no;//투표번호
 	private String v_tiime;
 	private String v_area;
 	private String v_confirm;
 	
-	public voteVO() {
+	public VoteVO() {
 		
 	}
 
-	public voteVO(String v_jumin, String v_name, int v_no, String v_tiime, String v_area, String v_confirm) {
+	public VoteVO(String v_jumin, String v_name, String m_no, String v_tiime, String v_area, String v_confirm) {
 		super();
 		this.v_jumin = v_jumin;
 		this.v_name = v_name;
-		this.v_no = v_no;
+		this.m_no = m_no;
 		this.v_tiime = v_tiime;
 		this.v_area = v_area;
 		this.v_confirm = v_confirm;
@@ -39,12 +40,12 @@ public class voteVO {
 		this.v_name = v_name;
 	}
 
-	public int getV_no() {
-		return v_no;
+	public String getM_no() {
+		return m_no;
 	}
 
-	public void setV_no(int v_no) {
-		this.v_no = v_no;
+	public void setM_no(String m_no) {
+		this.m_no = m_no;
 	}
 
 	public String getV_tiime() {

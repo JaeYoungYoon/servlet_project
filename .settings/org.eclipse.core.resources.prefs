@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/servlet_project/hb/command/VVcheckCommand.java=UTF-8
+encoding//src/servlet_project/hb/command/VoteCommand.java=UTF-8
+encoding//src/servlet_project/hb/dao/VCcheckDAO.java=UTF-8
+encoding//src/servlet_project/hb/dao/VCrankDAO.java=UTF-8
+encoding//src/servlet_project/hb/dao/VVcheckDAO.java=UTF-8
+encoding//src/servlet_project/hb/dao/VoteDAO.java=UTF-8
