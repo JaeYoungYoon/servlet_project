@@ -6,7 +6,7 @@
 - index.jsp (프로젝트 접속)
 
 투표 (이희복)
-- index.jsp / vote.jsp
+- index.jsp / VVcheck.jsp / VCcheck.jsp / VCrank.jsp / vote.jsp / .jsp
 - topmenu, footer (include)
 
 쇼핑몰 (윤재영)
@@ -23,13 +23,15 @@
 (데이터베이스를 다루는 VO, DAO 정리)
 
 투표
-- CandidateCheck (VO, DAO)
-- CandidateRank (VO, DAO)
-- VoteCheck (VO, DAO)
+- VoteController (Servlet)
+- voteVO, VVCheckVO, VCcheckVO, VCrankVO
+- (DAO)
+- VCommand (Command Interface)
+- VVCheckCommand, VCcheckCommand, VCrankCommand
 
 쇼핑몰
 - ShoppingController (Servlet)
-- MemberVO, MoneyVO
+- MemberVO, MoneyVO, MemberPriceVO
 - MemberDAO
 - SCommand (Command Interface)
 - SListCommand, SResultCommand
