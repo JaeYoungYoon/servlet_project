@@ -12,15 +12,21 @@
 <body>
 	<%@ 
 include file="topmenu.jsp"%>
-	<section>
+	<section class="main">
 
 		<h1>코딩하자</h1>
-		<p>
-			JSP 파일로 뼈대를 만들고 VO파일로 객체 정의<br> DAO로 쿼리문 정의하고 CONTROLLER로
-			COMMAND 관리<br> COMMAND는 INTERFACE를 상속받아 VO와 DAO 객체 호출<br>
-			웹페이지 호출
-		</p>
-
+		<div>
+		<h3>페이지 구조</h3>
+		<ul>
+			<li>JSP 파일로 뼈대를 만들고 VO파일로 객체 정의</li>
+			<li>DAO로 쿼리문 정의하고 CONTROLLER로 COMMAND 관리</li>
+			<li>COMMAND는 INTERFACE를 상속받아 VO와 DAO 객체 호출</li>
+			<li>웹페이지 호출</li>
+		</ul>
+		
+		</div>
+		<div>
+		<h3>페이지 내용</h3>
 		<ul>
 			<li>후보조회</li>
 
@@ -30,6 +36,7 @@ include file="topmenu.jsp"%>
 
 			<li>후보자등수</li>
 		</ul>
+		</div>
 
 	</section>
 	<%@

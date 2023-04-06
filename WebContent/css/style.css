@@ -52,11 +52,8 @@ section {
 	background: #e3e5e5;
 }
 
-.main {
-	margin: 0 2rem;
-}
 
-.main > ul >li {
+.main ul li {
 	list-style: number;
 }
 
@@ -78,6 +75,15 @@ section h1{
 	margin:20px auto;
 	text-align:center;
 }
+
+section div {
+	width:550px;
+	margin:0 auto;
+	margin-bottom:20px;
+	line-height:50px;
+}
+
+
 
 table {
 	width: 800px;
@@ -110,6 +116,7 @@ td input {
 	opacity: 0.6;
 	cursor: pointer;
 }
+
 
 footer {
 	position: fixed;
