@@ -52,24 +52,20 @@ section {
 	background: #e3e5e5;
 }
 
+section a{
+	color:#777;
+}
+
+section a:hover{
+	opacity:1;
+	text-decoration:underline;
+}
+
 
 .main ul li {
 	list-style: number;
 }
 
-.title {
-	font-size: 30px;
-	font-weight: 900;
-	text-align: center;
-	margin: 3rem;
-}
-
-.wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
 
 section h1{
 	margin:20px auto;

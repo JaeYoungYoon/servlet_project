@@ -98,9 +98,13 @@ public class MemberDAO {
 				int custno = resultSet.getInt("custno");
 				String custname = resultSet.getString("custname");
 				String grade = resultSet.getString("grade");
-				if(grade.equals("A")) {grade = "VIP";}
-				else if(grade.equals("B")) {grade = "老馆";}
-				else if(grade.equals("C")) {grade = "流盔";}
+				if (grade.equals("A")) {
+					grade = "VIP";
+				} else if (grade.equals("B")) {
+					grade = "老馆";
+				} else if (grade.equals("C")) {
+					grade = "流盔";
+				}
 				int price = resultSet.getInt("price");
 
 				MemberPriceVO vo = new MemberPriceVO(custno, custname, grade, price);
@@ -163,6 +167,93 @@ public class MemberDAO {
 
 		}
 		return rn;
+	}
+
+	public MemberVO view(String strno) {
+		MemberVO member = null;
+
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		ResultSet resultSet = null;
+
+		try {
+
+			String query = "select * from member_tbl_02 where custno = ?";
+
+			connection = dataSource.getConnection();
+			preparedStatement = connection.prepareStatement(query);
+			preparedStatement.setInt(1, Integer.valueOf(strno));
+			resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+				int custno = resultSet.getInt("custno");
+				String custname = resultSet.getString("custname");
+				String phone = resultSet.getString("phone");
+				String address = resultSet.getString("address");
+				String joindate = resultSet.getString("joindate");
+				String grade = resultSet.getString("grade");
+				String city = resultSet.getString("city");
+
+				member = new MemberVO(custno, custname, phone, address, joindate, grade, city);
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (resultSet != null)
+					resultSet.close();
+				if (preparedStatement != null)
+					preparedStatement.close();
+				if (connection != null)
+					connection.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}
+
+		return member;
+	}
+
+	public int modify(String custno, String custname, String phone, String address, String grade, String city) {
+		Connection connection = null;
+		PreparedStatement preparedStatement = null;
+		int rn = 0;
+
+		try {
+			String query = "UPDATE member_tbl_02 set=? phone=? address=? grade=? city=? where custno = ?";
+
+			connection = dataSource.getConnection();
+			preparedStatement = connection.prepareStatement(query);
+
+			preparedStatement.setString(1, custname);
+			preparedStatement.setString(2, phone);
+			preparedStatement.setString(3, address);
+			preparedStatement.setString(4, grade);
+			preparedStatement.setString(5, city);
+			preparedStatement.setInt(6, Integer.valueOf(custno));
+
+			rn = preparedStatement.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+
+				if (preparedStatement != null)
+					preparedStatement.close();
+				if (connection != null)
+					connection.close();
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+
+		}
+		return rn;
+
 	}
 
 }

@@ -12,30 +12,30 @@
 <body>
 	<%@ include file="topmenu.jsp"%>
 	<section>
-		<div class="title">회원매출조회</div>
-		<div class="wrapper">
-			<table>
-				<thead>
+		<h1>회원 매출 조회</h1>
+
+		<table>
+			<thead>
+				<tr>
+					<th>회원번호</th>
+					<th>회원성명</th>
+					<th>등급</th>
+					<th>가격</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach var="board" items="${boards}">
 					<tr>
-						<th>회원번호</th>
-						<th>회원성명</th>
-						<th>등급</th>
-						<th>가격</th>
-						
+						<td>${board.custno}</td>
+						<td>${board.custname}</td>
+						<td>${board.grade}</td>
+						<td>${board.price}</td>
 					</tr>
-				</thead>
-				<tbody>
-					<c:forEach var="board" items="${boards}">
-						<tr>
-							<td>${board.custno}</td>
-							<td>${board.custname}</td>
-							<td>${board.grade}</td>
-							<td>${board.price}</td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-		</div>
+				</c:forEach>
+			</tbody>
+		</table>
+
 	</section>
 	<%@ include file="footer.jsp"%>
 </body>

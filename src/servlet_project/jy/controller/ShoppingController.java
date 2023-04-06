@@ -12,12 +12,15 @@ import javax.servlet.http.HttpServletResponse;
 import servlet_project.jy.command.SCommand;
 import servlet_project.jy.command.SInsertCommand;
 import servlet_project.jy.command.SListCommand;
+import servlet_project.jy.command.SModifyCommand;
 import servlet_project.jy.command.SResultCommand;
+import servlet_project.jy.command.SViewCommand;
 
 /**
  * Servlet implementation class ShoppingController
  */
-@WebServlet(urlPatterns = {"/JSP_jy/main.do", "/JSP_jy/list.do", "/JSP_jy/writer_view.do", "/JSP_jy/result.do", "/JSP_jy/insert.do"})
+@WebServlet(urlPatterns = { "/JSP_jy/main.do", "/JSP_jy/list.do", "/JSP_jy/writer_view.do", "/JSP_jy/result.do",
+		"/JSP_jy/insert.do", "/JSP_jy/view.do", "/JSP_jy/modify.do" })
 public class ShoppingController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -93,7 +96,24 @@ public class ShoppingController extends HttpServlet {
 			command = new SInsertCommand();
 			command.execute(request, response);
 			viewPage = "list.do";
+		} else if (com.contains("view.do")) {
+			System.out.println("uri : " + uri);
+			System.out.println("contextPath : " + contextPath);
+			System.out.println("command : " + com);
+
+			command = new SViewCommand();
+			command.execute(request, response);
+			viewPage = "modify.jsp";
+		} else if (com.contains("modify.do")) {
+			System.out.println("uri : " + uri);
+			System.out.println("contextPath : " + contextPath);
+			System.out.println("command : " + com);
+
+			command = new SModifyCommand();
+			command.execute(request, response);
+			viewPage = "list.do";
 		}
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
 	}
