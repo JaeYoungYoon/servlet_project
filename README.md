@@ -6,15 +6,15 @@
 - index.jsp (프로젝트 접속)
 
 투표 (이희복)
-- index.jsp / VVcheck.jsp / VCcheck.jsp / VCrank.jsp / vote.jsp / .jsp
+- index.jsp / VCcheck.jsp (후보 조회) / Vote.jsp (투표하기) / VVcheck.jsp (투표 검수 조회) / VCrank.jsp (후보자 등수)
 - topmenu, footer (include)
 
 쇼핑몰 (윤재영)
-- main.jsp / add.jsp / result.jsp / list.jsp
+- main.jsp / add.jsp (회원 등록하기) / list.jsp (회원목록 조회) / result.jsp (매출 조회)
 - topmenu, footer (include)
 
 골프장 (조유성)
-- MainGolf.jsp
+- MainGolf.jsp / / / 
 - top, bottom (include)
 
 ======================
@@ -24,19 +24,24 @@
 
 투표
 - VoteController (Servlet)
-- voteVO, VVCheckVO, VCcheckVO, VCrankVO
-- (DAO)
+- VCcheckVO, VoteVO, VVCheckVO, VCrankVO
+- VCcheckDAO, VoteDAO, VVCheckDAO, VCrankDAO
 - VCommand (Command Interface)
-- VVCheckCommand, VCcheckCommand, VCrankCommand
+- VCcheckCommand, VoteCommand, VVCheckCommand, VCrankCommand
 
 쇼핑몰
 - ShoppingController (Servlet)
 - MemberVO, MoneyVO, MemberPriceVO
 - MemberDAO
 - SCommand (Command Interface)
-- SListCommand, SResultCommand
+- SListCommand, SResultCommand, SInsertCommand
 
 골프장
+- (Servlet)
+- (VO)
+- (DAO)
+- (Command Interface)
+- (Command)
 
 ======================
 
