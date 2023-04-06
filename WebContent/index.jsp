@@ -18,14 +18,14 @@
 		</ul>
 	</nav>
 	<section>
-		<div class="title">ReadMe.md</div>
+		<h1>ReadMe.md</h1>
 		<div class="main">
-			윤재영, 이희복, 조유성<br>
+			참여자 : 윤재영, 이희복, 조유성<br>
 
 			<ul>
-				<li>투표</li>
-				<li>쇼핑몰</li>
-				<li>골프장</li>
+				<li>윤재영 : 쇼핑몰 회원 관리 프로그램</li>
+				<li>이희복 : 후보에 대한 유권자 관리 프로그램</li>
+				<li>조유성 : 골프장 회원 관리 프로그램</li>
 			</ul>
 		</div>
 	</section>
