@@ -17,7 +17,7 @@ import servlet_project.jy.command.SResultCommand;
 /**
  * Servlet implementation class ShoppingController
  */
-@WebServlet("/JSP_jy/*.do")
+@WebServlet(urlPatterns = {"/JSP_jy/main.do", "/JSP_jy/list.do", "/JSP_jy/writer_view.do", "/JSP_jy/result.do", "/JSP_jy/insert.do"})
 public class ShoppingController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -58,41 +58,41 @@ public class ShoppingController extends HttpServlet {
 		String contextPath = request.getContextPath();
 		String com = uri.substring(contextPath.length());
 
-		if (com.contains("/JSP_jy/main.do")) {
+		if (com.contains("main.do")) {
 			System.out.println("uri : " + uri);
 			System.out.println("contextPath : " + contextPath);
 			System.out.println("command : " + com);
-			viewPage = "/JSP_jy/main.jsp";
-		} else if (com.contains("/JSP_jy/list.do")) {
+			viewPage = "main.jsp";
+		} else if (com.contains("list.do")) {
 			System.out.println("uri : " + uri);
 			System.out.println("contextPath : " + contextPath);
 			System.out.println("command : " + com);
 
 			command = new SListCommand();
 			command.execute(request, response);
-			viewPage = "/JSP_jy/list.jsp";
-		} else if (com.contains("/JSP_jy/writer_view.do")) {
+			viewPage = "list.jsp";
+		} else if (com.contains("writer_view.do")) {
 			System.out.println("uri : " + uri);
 			System.out.println("contextPath : " + contextPath);
 			System.out.println("command : " + com);
 
-			viewPage = "/JSP_jy/add.jsp";
-		} else if (com.contains("/JSP_jy/result.do")) {
+			viewPage = "add.jsp";
+		} else if (com.contains("result.do")) {
 			System.out.println("uri : " + uri);
 			System.out.println("contextPath : " + contextPath);
 			System.out.println("command : " + com);
 
 			command = new SResultCommand();
 			command.execute(request, response);
-			viewPage = "/JSP_jy/result.jsp";
-		} else if (com.contains("/JSP_jy/insert.do")) {
+			viewPage = "result.jsp";
+		} else if (com.contains("insert.do")) {
 			System.out.println("uri : " + uri);
 			System.out.println("contextPath : " + contextPath);
 			System.out.println("command : " + com);
 
 			command = new SInsertCommand();
 			command.execute(request, response);
-			viewPage = "/JSP_jy/list.do";
+			viewPage = "list.do";
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);

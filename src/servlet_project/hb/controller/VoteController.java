@@ -17,7 +17,7 @@ import servlet_project.hb.command.VVcheckCommand;
 /**
  * Servlet implementation class VoteController
  */
-@WebServlet("/JSP_hb/*.do")
+@WebServlet(urlPatterns = {"/JSP_hb/index.do", "/JSP_hb/VCcheck.do", "/JSP_hb/VVcheck.do", "/JSP_hb/VCrank.do"})
 public class VoteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -54,19 +54,22 @@ public class VoteController extends HttpServlet {
 		String contextPath = request.getContextPath();
 		String com = uri.substring(contextPath.length());
 		
-		if(com.contains("/JSP_hb/VCcheck.do")) {
+		if(com.contains("index.do")) {
+			viewPage = "index.jsp";
+		}
+		else if(com.contains("VCcheck.do")) {
 			command = new VCcheckCommand();
 			command.execute(request, response);
-			viewPage = "/JSP_hb/VCcheck.jsp";
-		}else if(com.contains("/VVcheck.do")) {
+			viewPage = "VCcheck.jsp";
+		}else if(com.contains("VVcheck.do")) {
 			command = new VVcheckCommand();
 			command.execute(request, response);
-			viewPage = "/JSP_hb/VVcheck.jsp";
+			viewPage = "VVcheck.jsp";
 		}
-		else if(com.contains("JSP_hb//VCrank.do")) {
+		else if(com.contains("VCrank.do")) {
 			command = new VCrankCommand();
 			command.execute(request, response);
-			viewPage = "/JSP_hb/VCrank.jsp";
+			viewPage = "VCrank.jsp";
 		}
 		RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 		dispatcher.forward(request, response);
