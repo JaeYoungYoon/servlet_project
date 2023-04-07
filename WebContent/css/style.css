@@ -52,40 +52,36 @@ section {
 	background: #e3e5e5;
 }
 
-section a{
-	color:#777;
+section a {
+	color: #777;
 }
 
-section a:hover{
-	opacity:1;
-	text-decoration:underline;
+section a:hover {
+	opacity: 1;
+	text-decoration: underline;
 }
-
 
 .main ul li {
 	list-style: number;
 }
 
-
-section h1{
-	margin:20px auto;
-	text-align:center;
+section h1 {
+	margin: 20px auto;
+	text-align: center;
 }
 
 section div {
-	width:550px;
-	margin:0 auto;
-	margin-bottom:20px;
-	line-height:50px;
+	width: 550px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	line-height: 50px;
 }
-
-
 
 table {
 	width: 800px;
 	cellspacing: 0;
 	cellpadding: 0;
-	margin : 20px auto;
+	margin: 20px auto;
 }
 
 table, tr, th, td {
@@ -94,11 +90,16 @@ table, tr, th, td {
 	padding: 0.7rem;
 }
 
-th, td{
-	text-align:center;
+th, td {
+	text-align: center;
 }
 
 td input {
+	padding: 0.3rem;
+}
+
+input[type=number] {
+	width: 150px;
 	padding: 0.3rem;
 }
 
@@ -113,7 +114,6 @@ td input {
 	cursor: pointer;
 }
 
-
 footer {
 	position: fixed;
 	bottom: 0;
@@ -122,5 +122,5 @@ footer {
 	line-height: 50px;
 	text-align: center;
 	background: #333;
-	color:#EEE;
+	color: #EEE;
 }

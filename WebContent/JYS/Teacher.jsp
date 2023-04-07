@@ -7,12 +7,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="../css/style.css">
-<link rel="stylesheet" href="../css/style_ys.css" />
 </head>
 
 <body>
-	<%@ include file="top.jsp"%>
-	<div class="TEAMWORK">
+	<%@ include file="topmenu.jsp"%>
+
+	<section>
+
 		<h1>강사 조회</h1>
 		<table>
 			<tr>
@@ -35,10 +36,11 @@
 				<td colspan="5"><a href="list.do">목록으로</a></td>
 			</tr>
 
-			<%@ include file="bottom.jsp"%>
+			
 		</table>
-	</div>
-	<%@ include file="bottom.jsp"%>
+
+	</section>
+<%@ include file="footer.jsp"%>
 
 </body>
 </html>

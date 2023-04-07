@@ -6,13 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../css/style_ys.css" />
+<link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
-	<%@ include file="top.jsp"%>
+	<%@ include file="topmenu.jsp"%>
 
-	<div class="TEAMWORK">
+	<section>
 		<h1>강사매출현황</h1>
 		<table>
 			<tr>
@@ -31,11 +31,11 @@
 				</tr>
 			</c:forEach>
 			<tr>
-				<td colspan="5"><a href="list.do">목록으로</a></td>
+				<td colspan="4"><a href="list.do">목록으로</a></td>
 			</tr>
 		</table>
 
-	</div>
-	<%@ include file="bottom.jsp"%>
+	</section>
+	<%@ include file="footer.jsp"%>
 </body>
 </html>

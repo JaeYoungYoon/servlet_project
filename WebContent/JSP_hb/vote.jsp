@@ -23,11 +23,11 @@ include file="topmenu.jsp"%>
 		<br>
 
 		<form action="submit.do" method="post">
-			<table width="500" cellpadding="0" cellspacing="0" border="1">
+			<table>
 				<tr>
 					<td>주민번호</td>
 					<td><input id="v_jumin" type="text" name="v_jumin"
-						value="${vote.v_jumin}"> 예:8906153154726</td>
+						value="${vote.v_jumin}" placeholder="예:8906153154726"></td>
 				</tr>
 				<tr>
 					<td>성명</td>
