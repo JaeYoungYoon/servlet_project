@@ -8,13 +8,14 @@
 <meta charset="UTF-8">
 <title>main</title>
 <link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body>
 	<%@ include file="topmenu.jsp"%>
 	<section>
 		<h1>홈쇼핑 회원 등록</h1>
-		<form name="form" action="insert.do" method="get">
-
+		<form name="form" action="insert.do" method="get"
+			onsubmit="return checkForm(this)">
 			<table>
 				<tr>
 					<th>회원성명</th>
