@@ -34,7 +34,7 @@
 - MemberVO, MoneyVO, MemberPriceVO
 - MemberDAO
 - SCommand (Command Interface)
-- SListCommand, SResultCommand, SInsertCommand, SModifyCommand
+- SListCommand, SResultCommand, SInsertCommand, SViewCommand, SModifyCommand
 
 골프장
 - (Servlet)
