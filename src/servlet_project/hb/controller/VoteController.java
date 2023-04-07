@@ -18,7 +18,8 @@ import servlet_project.hb.command.VoteCommand;
 /**
  * Servlet implementation class VoteController
  */
-@WebServlet(urlPatterns = { "/JSP_hb/index.do", "/JSP_hb/VCcheck.do", "/JSP_hb/VVcheck.do", "/JSP_hb/VCrank.do", "/JSP_hb/Vote.do", "/JSP_hb/submit.do" })
+@WebServlet(urlPatterns = { "/JSP_hb/index.do", "/JSP_hb/VCcheck.do", "/JSP_hb/VVcheck.do", "/JSP_hb/VCrank.do",
+		"/JSP_hb/Vote.do", "/JSP_hb/submit.do" })
 public class VoteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

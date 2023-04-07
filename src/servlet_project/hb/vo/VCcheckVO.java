@@ -1,8 +1,8 @@
-//<후보조회>
+
 package servlet_project.hb.vo;
 
 public class VCcheckVO {
-	
+
 	private String m_no;
 	private String m_name;
 	private String p_code;
@@ -12,9 +12,9 @@ public class VCcheckVO {
 	private String p_tel1;
 	private String p_tel2;
 	private String p_tel3;
-	
+
 	public VCcheckVO() {
-		
+
 	}
 
 	public VCcheckVO(String m_no, String m_name, String p_code, String p_school, String m_jumin, String m_city,
@@ -103,5 +103,4 @@ public class VCcheckVO {
 		this.p_tel3 = p_tel3;
 	}
 
-	
 }

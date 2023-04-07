@@ -16,7 +16,7 @@
 	<section>
 
 		<h1>투표검수조회</h1>
-		
+
 		<table>
 			<thead>
 				<tr>

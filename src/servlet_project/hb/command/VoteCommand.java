@@ -1,4 +1,4 @@
-//<�닾�몴�븯湲�>
+
 package servlet_project.hb.command;
 
 import javax.servlet.http.HttpServletRequest;

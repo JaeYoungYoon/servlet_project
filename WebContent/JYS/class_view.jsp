@@ -6,36 +6,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-	h1 {
-		text-align: center;
-	}
-	table {
-		margin: 0 auto;
-	}
-	</style>
 	<link rel="stylesheet" href="../css/style_ys.css" />
 </head>
 
 <body>
 <%@ include file="top.jsp"%>
 
-	<H1>강사매출현황</H1><br/><br/><br/>
+	<h1>강사매출현황</h1>
 	<table width="500" cellpadding="0" cellspacing="0" border="1">
 		<tr>
-			<td>수강일자</td>
-			<td>전화번호</td>
-			<td>수강지역</td>
+			<td>강사코드</td>
+			<td>강의이름</td>
+			<td>강사이름</td>
 			<td>요금</td>
-			<td>강사번호</td>
+
 		</tr>
-		<c:forEach var="classVO" items="${classes}">
+		<c:forEach var="classVO" items="${boards}">
 			<tr>
-				<td>${classVO.regist_month}</td>
-				<td>${classVO.c_no}</td>
-				<td>${classVO.class_area}</td>
-				<td>${classVO.tuition}</td>
 				<td>${classVO.teacher_code}</td>
+				<td>${classVO.class_name}</td>
+				<td>${classVO.teacher_name}</td>
+				<td>${classVO.tuition}</td>
 			</tr>
 		</c:forEach>
 		<tr>

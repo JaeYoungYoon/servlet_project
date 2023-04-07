@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
+encoding//src/servlet_project/JYS/dao/GolfDao.java=UTF-8
+encoding//src/servlet_project/hb/command/VCcheckCommand.java=UTF-8
 encoding//src/servlet_project/hb/command/VVcheckCommand.java=UTF-8
 encoding//src/servlet_project/hb/command/VoteCommand.java=UTF-8
 encoding//src/servlet_project/hb/dao/VCcheckDAO.java=UTF-8

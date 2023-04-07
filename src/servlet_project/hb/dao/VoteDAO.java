@@ -11,21 +11,21 @@ import javax.sql.DataSource;
 public class VoteDAO {
 	private DataSource dataSource;
 
-	public VoteDAO() {   
-	      try {
-	         Context context = new InitialContext();
-	         dataSource = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
-	      } catch (Exception e) {
-	         e.printStackTrace();
-	      }
-	   }
+	public VoteDAO() {
+		try {
+			Context context = new InitialContext();
+			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	public int list(String v_jumin, String v_name, String m_no, String v_time, String v_area, String v_confirm) {
 
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
 		int rn = 0;
-		
+
 		try {
 			String query = "INSERT INTO TBL_VOTE_202005(V_JUMIN, V_NAME, M_NO, V_TIME, V_AREA, V_CONFIRM) VALUES(?, ?, ?, ?, ?, ?)";
 
@@ -38,7 +38,7 @@ public class VoteDAO {
 			preparedStatement.setString(4, v_time);
 			preparedStatement.setString(5, v_area);
 			preparedStatement.setString(6, v_confirm);
-			
+
 			rn = preparedStatement.executeUpdate();
 
 		} catch (Exception e) {

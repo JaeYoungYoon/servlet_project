@@ -14,8 +14,7 @@
 	<%@ include file="topmenu.jsp"%>
 	<section>
 		<h1>홈쇼핑 회원 등록</h1>
-		<form name="form" action="insert.do" method="get"
-			onsubmit="return checkForm(this)">
+		<form name="form" action="insert.do" method="get">
 			<table>
 				<tr>
 					<th>회원성명</th>

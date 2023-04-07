@@ -1,4 +1,4 @@
-//<투표검수조회>
+
 package servlet_project.hb.vo;
 
 public class VVcheckVO {
@@ -9,9 +9,9 @@ public class VVcheckVO {
 	private String m_no;
 	private String v_time;
 	private String v_confirm;
-	
+
 	public VVcheckVO() {
-		
+
 	}
 
 	public VVcheckVO(String v_name, String v_birth, String v_age, String v_gender, String m_no, String v_time,
@@ -81,7 +81,5 @@ public class VVcheckVO {
 	public void setV_confirm(String v_confirm) {
 		this.v_confirm = v_confirm;
 	}
-
-	
 
 }

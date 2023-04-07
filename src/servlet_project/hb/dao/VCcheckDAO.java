@@ -15,14 +15,14 @@ import servlet_project.hb.vo.VCcheckVO;
 public class VCcheckDAO {
 	private DataSource dataSource;
 
-	public VCcheckDAO() {   
-	      try {
-	         Context context = new InitialContext();
-	         dataSource = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
-	      } catch (Exception e) {
-	         e.printStackTrace();
-	      }
-	   }
+	public VCcheckDAO() {
+		try {
+			Context context = new InitialContext();
+			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/oracle");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	public List<VCcheckVO> list() {
 		List<VCcheckVO> boards = new ArrayList<VCcheckVO>();
@@ -39,7 +39,7 @@ public class VCcheckDAO {
 			resultSet = preparedStatement.executeQuery();
 
 			while (resultSet.next()) {
-				
+
 				String m_no = resultSet.getString("m_no");
 				String m_name = resultSet.getString("m_name");
 				String p_code = resultSet.getString("p_code");

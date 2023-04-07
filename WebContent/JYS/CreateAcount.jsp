@@ -6,12 +6,8 @@
 <title>골프 연습장 회원관리 프로그램 VER1.0</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<style type="text/css">
-	table {
-		margin: 0 auto;
-	}
-	</style>
-	<link rel="stylesheet" href="../css/style_ys.css" />
+
+<link rel="stylesheet" href="../css/style_ys.css" />
 </head>
 
 <body>
@@ -22,50 +18,58 @@
 	<section>
 		<div class="TEAMWORK">
 
-		
-			<h1>골프 연습장 회원관리 시스템</h1><br/><br/>
-					
-					
-			<table width="500" cellpadding="0" cellspacing="0" border="1">
-			<form action="register.jsp" method="post">
-			<label for="REGIST_MONTH">수강월:</label>
-			<input type="text" id="usermonth" name="usermonth" required>2022년03월 예)202203<br><br>
-			
-			<label for="C_NAME">회원명:</label>
-			<select id="guestname" name="guestname">
-			<option value="NAME">회원명</option>
-			<option value="Hong">홍길동</option>
-			<option value="Jang">장발장</option>
-			<option value="Im">임꺽정</option>
-			<option value="Chun">성춘향</option>
-			<option value="Dragon">이몽룡</option>
-			
-			</select><br><br>
-		
-			<label for="C_NO">회원번호:</label>
-			<input type="text" id="guestNum" name="guestNum" required><br><br>
-			
-			<label for="CLASS_AREA">강의장소</label>
-			<select id="CLASS_AREA" name="guestname">
-			<option value="10001">장소</option>
-			<option value="10002">서울본원</option>
-			<option value="10003">대전분원</option>
-			<option value="20001">부산분원</option>
-			<option value="20002">대구분원</option>
-			</select><br><br>
 
-		
-		<label for="name">수강료</label>
-		<input type="text" id="name" name="name" required>원<br><br>
-		
-		<input type="submit" value="수강신청">
-		<input type="reset" value="다시쓰기">
-		
-		</form>
-		</table>
+			<h1>수강신청</h1>
+
+			<form action="action.jsp" method="post">
+				<table width="500" cellpadding="0" cellspacing="0" border="1">
+					<tr>
+						<td><label for="regist_month" maxlength="6">수강월:</label></td>
+						<td><input type="text" name="regist_month" required>
+							2022년03월 예)202203</td>
+					</tr>
+					<tr>
+						<td><label for="c_name">회원명</label></td>
+						<td><select name="c_name">
+								<option value="">회원명</option>
+								<option value="10001">홍길동</option>
+								<option value="10002">장발장</option>
+								<option value="10003">임꺽정</option>
+								<option value="20001">성춘향</option>
+								<option value="20002">이몽룡</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td><label for="c_no">회원번호</label></td>
+						<td><input type="text" name="c_no">예)10001</td>
+					</tr>
+					<tr>
+						<td><label for="class_area">강의장소</label></td>
+						<td><select name="class_area">
+								<option value="">장소</option>
+								<option value="서울본원">서울본원</option>
+								<option value="대전본원">대전분원</option>
+								<option value="부산본원">부산분원</option>
+								<option value="대구본원">대구분원</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td><label for="tuition">수강료</label></td>
+						<td><input type="text" name="tuition">원</td>
+					</tr>
+					<tr>
+						<td style="text-align: center;" colspan="2">
+							<button class="btn" type="submit">수강신청</button>
+							<button class="btn" type="button" onclick="fn_reset();">
+								리셋하기</button>
+					</tr>
+				</table>
+			</form>
+
+
+
+
 		</div>
-
-
 	</section>
 
 

@@ -1,14 +1,14 @@
-//<후보자등수>
+
 package servlet_project.hb.vo;
 
 public class VCrankVO {
-	
+
 	private String m_no;
 	private String m_name;
 	private String m_total;
-	
+
 	public VCrankVO() {
-		
+
 	}
 
 	public VCrankVO(String m_no, String m_name, String m_total) {
@@ -42,5 +42,4 @@ public class VCrankVO {
 		this.m_total = m_total;
 	}
 
-	
 }

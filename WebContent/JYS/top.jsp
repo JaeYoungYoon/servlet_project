@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,8 +15,7 @@
 	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-	
-<script src="./js/clock.js"></script>	
+
 </head>
 <body>
 	<header>
@@ -26,7 +25,7 @@
 	</header>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="http://localhost:8282/servelet_hello/JYS/Teacher.do">강사조회</a>
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse"
 			data-target="#navbarScroll" aria-controls="navbarScroll"
 			aria-expanded="false" aria-label="Toggle navigation">
@@ -40,27 +39,26 @@
 			<ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll"
 				style="max-height: 100px">
 
-
-				<li class="nav-item"><a class="nav-link" href="http://localhost:8282/servelet_hello/JYS/CreateAcount.jsp">수강신청</a></li>
-
-
-				<li class="nav-item"><a class="nav-link" href="http://localhost:8282/servelet_hello/JYS/Guest.do">회원 정보 시스템</a>
-				</li>
-
-
-				<li class="nav-item"><a class="nav-link" href="Class.do">장사 매출 현황</a>
-				</li>
-
 				<li class="nav-item"><a class="nav-link" href="list.do">홈으로</a>
 				</li>
 
+				<li class="nav-item"><a class="nav-link" href="teacher.do">강사조회</a></li>
+
+				<li class="nav-item"><a class="nav-link"
+					href="CreateAcount.jsp">수강신청</a></li>
+
+
+				<li class="nav-item"><a class="nav-link" href="guest.do">회원
+						정보 시스템</a></li>
+
+
+				<li class="nav-item"><a class="nav-link" href="class.do">강사
+						매출 현황</a></li>
+
+
+				<li class="nav-item"><a class="nav-link" href="../index.jsp">다른
+						프로젝트 보기</a></li>
 			</ul>
-
-
-			<!-- <h1 id="clock">00:00:00</h1>
-			<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-			<!-- 시계 -->
-
 
 		</div>
 	</nav>

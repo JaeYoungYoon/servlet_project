@@ -9,18 +9,18 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="../css/style.css">
 
-
 </head>
 <body>
 
-	<%@ include file="topmenu.jsp"%>
+	<%@ 
+include file="topmenu.jsp"%>
 	<section>
 
 		<h1>후보조회</h1>
+		<br>
 
-
-		<table>
-			<form action="VCcheck.do" method="post">
+		<form action="VCcheck.do" method="post">
+			<table>
 				<input type="hidden" name="m_no" value="${VCcheck.m_no}">
 
 				<tr>
@@ -40,12 +40,12 @@
 						<td>${VCcheck.p_school}</td>
 						<td>${VCcheck.m_jumin}</td>
 						<td>${VCcheck.m_city}</td>
-						<td>${VCcheck.p_tel1} - ${VCcheck.p_tel2} - ${VCcheck.p_tel3}
+						<td>${VCcheck.p_tel1}- ${VCcheck.p_tel2} - ${VCcheck.p_tel3}
 						</td>
 					</tr>
 				</c:forEach>
-			</form>
-		</table>
+			</table>
+		</form>
 	</section>
 	<%@
 include file="footer.jsp"%>

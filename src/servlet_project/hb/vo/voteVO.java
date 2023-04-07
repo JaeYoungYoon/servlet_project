@@ -1,17 +1,17 @@
-//<투표하기>
+
 package servlet_project.hb.vo;
 
 public class VoteVO {
-	
+
 	private String v_jumin;
 	private String v_name;
-	private String m_no;//투표번호
+	private String m_no;
 	private String v_tiime;
 	private String v_area;
 	private String v_confirm;
-	
+
 	public VoteVO() {
-		
+
 	}
 
 	public VoteVO(String v_jumin, String v_name, String m_no, String v_tiime, String v_area, String v_confirm) {
@@ -72,5 +72,4 @@ public class VoteVO {
 		this.v_confirm = v_confirm;
 	}
 
-	
 }

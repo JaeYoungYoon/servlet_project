@@ -6,49 +6,42 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
-<style type="text/css">
-	h1 {
-		text-align: center;
-	}
-	table {
-		margin: 0 auto;
-	}
-	</style>
-
-
 <link rel="stylesheet" href="../css/style_ys.css" />
 </head>
 <body>
 
-<%@ include file="top.jsp"%>
+	<%@ include file="top.jsp"%>
 
-	
-	
+	<h1>회원 정보</h1>
+
 	<table width="500" cellpadding="0" cellspacing="0" border="1">
-	<h1> 회원 정보 </h1><br/><br/><br/><br/>
+
 		<tr>
+			<td>수강월</td>
 			<td>회원번호</td>
-			<td>회원이름</td>
-			<td>전화번호</td>
-			<td>주소</td>
-			<td>회원등급</td>
+			<td>회원명</td>
+			<td>강의명</td>
+			<td>강의장소</td>
+			<td>수강료</td>
+			<td>등급</td>
 		</tr>
 		<c:forEach var="guest" items="${guests}">
 			<tr>
+				<td>${guest.regist_month}</td>
 				<td>${guest.c_no}</td>
 				<td>${guest.c_name}</td>
-				<td>${guest.phone}</td>
-				<td>${guest.address}</td>
+				<td>${guest.class_name}</td>
+				<td>${guest.class_area}</td>
+				<td>${guest.tuition}</td>
 				<td>${guest.grade}</td>
 			</tr>
 		</c:forEach>
 		<tr>
-			<td colspan="5"><a href="list.do">목록으로</a></td>
+			<td colspan="7"><a href="list.do">목록으로</a></td>
 		</tr>
 	</table>
-	
 
-<%@ include file="bottom.jsp"%>
+
+	<%@ include file="bottom.jsp"%>
 </body>
 </html>
