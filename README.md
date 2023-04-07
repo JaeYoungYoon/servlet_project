@@ -47,6 +47,6 @@
 
 ~ Database ~
 (각 프로젝트 별 데이터베이스)
-- heebok1.sql (투표 데이터)
+- heebok2.sql (투표 데이터)
 - jaeyoung.sql (쇼핑몰 데이터)
 - GolfProject.sql (골프장 관리 테이블 데이터)
