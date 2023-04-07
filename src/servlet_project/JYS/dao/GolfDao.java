@@ -94,11 +94,7 @@ public class GolfDao {
 
 		try {
 
-			String query = "select regist_month,tbl_member_202201.c_no,c_name,class_name,class_area,tuition,grade "
-					+ "from tbl_member_202201,tbl_class_202201,tbl_teacher_202201 "
-					+ "where tbl_class_202201.teacher_code=tbl_teacher_202201.teacher_code "
-					+ "and tbl_class_202201.c_no=tbl_member_202201.c_no ";
-//			荑쇰━�뒗 sql�뿉 蹂몃뵲�꽌 �굹以묒뿉 �닔�젙�븯�룄濡�
+			String query = "select regist_month,tbl_member_202201.c_no,c_name,class_name,class_area,tuition,grade from tbl_member_202201,tbl_class_202201,tbl_teacher_202201 where tbl_class_202201.teacher_code=tbl_teacher_202201.teacher_code and tbl_class_202201.c_no=tbl_member_202201.c_no";
 
 			connection = dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(query);

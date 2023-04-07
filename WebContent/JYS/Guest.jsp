@@ -6,15 +6,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/style_ys.css" />
 </head>
 <body>
 
 	<%@ include file="top.jsp"%>
 
+	<div class="TEAMWORK">
 	<h1>회원 정보</h1>
 
-	<table width="500" cellpadding="0" cellspacing="0" border="1">
+	<table>
 
 		<tr>
 			<td>수강월</td>
@@ -40,7 +42,8 @@
 			<td colspan="7"><a href="list.do">목록으로</a></td>
 		</tr>
 	</table>
-
+	
+	</div>
 
 	<%@ include file="bottom.jsp"%>
 </body>

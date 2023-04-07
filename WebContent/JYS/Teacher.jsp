@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/style_ys.css" />
 </head>
 
@@ -14,7 +14,7 @@
 	<%@ include file="top.jsp"%>
 	<div class="TEAMWORK">
 		<h1>강사 조회</h1>
-		<table width="500" cellpadding="0" cellspacing="0" border="1">
+		<table>
 			<tr>
 				<td>강사번호</td>
 				<td>강사이름</td>

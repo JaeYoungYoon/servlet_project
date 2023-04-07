@@ -6,7 +6,7 @@
 <title>골프 연습장 회원관리 프로그램 VER1.0</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/style_ys.css" />
 </head>
 
@@ -22,7 +22,7 @@
 			<h1>수강신청</h1>
 
 			<form action="action.jsp" method="post">
-				<table width="500" cellpadding="0" cellspacing="0" border="1">
+				<table>
 					<tr>
 						<td><label for="regist_month" maxlength="6">수강월:</label></td>
 						<td><input type="text" name="regist_month" required>

@@ -14,8 +14,8 @@
 - topmenu, footer (include)
 
 골프장 (조유성)
-- MainGolf.jsp / / / 
-- top, bottom (include)
+- MainGolf2.jsp / Teacher.jsp (강사 조회) / CreateAcount.jsp (수강신청) / Guest.jsp (회원 정보) / class_view.jsp (강사 매출 현황)
+- top, bottom (include) / action.jsp (수강신청 submit하면 이동하는 곳)
 
 ======================
 
@@ -37,11 +37,11 @@
 - SListCommand, SResultCommand, SInsertCommand, SViewCommand, SModifyCommand
 
 골프장
-- (Servlet)
-- (VO)
-- (DAO)
-- (Command Interface)
-- (Command)
+- GolfController (Servlet)
+- TeacherVO, CreateVO, GuestVO, ClassVO (VO)
+- GolfDao (DAO)
+- GolfComand (Command Interface)
+- TeacherCommand, GolfCommand, GuestCommand, ClassCommand (Command)
 
 ======================
 
