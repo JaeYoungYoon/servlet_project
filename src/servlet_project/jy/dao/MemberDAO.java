@@ -224,7 +224,7 @@ public class MemberDAO {
 		int rn = 0;
 
 		try {
-			String query = "UPDATE member_tbl_02 set=? phone=? address=? grade=? city=? where custno = ?";
+			String query = "UPDATE member_tbl_02 set custname=?, phone=?, address=?, grade=?, city=? where custno=?";
 
 			connection = dataSource.getConnection();
 			preparedStatement = connection.prepareStatement(query);

@@ -13,12 +13,12 @@
 	<%@ include file="topmenu.jsp"%>
 	<section>
 		<h1>회원 정보 수정</h1>
-		<form name="form" action="modify.do?custno = ${board.custno}" method="get">
-			<input type="hidden" value="${board.custno}">
+		<form name="form" action="modify.do" method="get">
+
 			<table>
 				<tr>
 					<th>회원번호</th>
-					<td>${board.custno}</td>
+					<td><input type="text" name="custno" value="${board.custno}"></td>
 				</tr>
 				<tr>
 					<th>회원성명</th>
