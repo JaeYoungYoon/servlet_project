@@ -22,15 +22,17 @@
 				</tr>
 				<tr>
 					<th>회원전화</th>
-					<td><input type="text" name="phone"></td>
+					<td><input type="text" name="phone"
+						placeholder="010-1111-2222"></td>
 				</tr>
 				<tr>
 					<th>회원주소</th>
 					<td><input type="text" name="address"></td>
 				</tr>
 				<tr>
-					<th>고객등급[A:VIP,B:일반,C:직원]</th>
-					<td><input type="text" name="grade"></td>
+					<th>고객등급</th>
+					<td><input type="text" name="grade"
+						placeholder="[A:VIP,B:일반,C:직원]"></td>
 				</tr>
 				<tr>
 					<th>도시코드</th>

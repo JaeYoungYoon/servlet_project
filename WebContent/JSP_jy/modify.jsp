@@ -18,7 +18,7 @@
 			<table>
 				<tr>
 					<th>회원번호</th>
-					<td><input type="text" name="custno" value="${board.custno}"></td>
+					<td><input type="text" name="custno" value="${board.custno}" readonly></td>
 				</tr>
 				<tr>
 					<th>회원성명</th>

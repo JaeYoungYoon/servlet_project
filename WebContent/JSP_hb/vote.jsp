@@ -56,11 +56,9 @@ include file="topmenu.jsp"%>
 						name="v_confirm" value="N">미확인</td>
 				</tr>
 				<tr>
-					<td colspan="2">
-						<center>
-							<input type="submit" value="투표하기" onclick="return add()">
-							<input type="reset" value="다시하기">
-						</center>
+					<td colspan="2"><input type="submit" value="투표하기"
+						onclick="return add()"> <input type="reset" value="다시하기">
+
 					</td>
 				</tr>
 			</table>
