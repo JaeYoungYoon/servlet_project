@@ -10,7 +10,7 @@
 - topmenu, footer (include)
 
 쇼핑몰 (윤재영)
-- main.jsp / add.jsp (회원 등록하기) / list.jsp (회원목록 조회) / result.jsp (매출 조회)
+- main.jsp / add.jsp (회원 등록하기) / list.jsp (회원목록 조회) / result.jsp (매출 조회) / modify.jsp (회원정보 수정)
 - topmenu, footer (include)
 
 골프장 (조유성)
@@ -34,7 +34,7 @@
 - MemberVO, MoneyVO, MemberPriceVO
 - MemberDAO
 - SCommand (Command Interface)
-- SListCommand, SResultCommand, SInsertCommand
+- SListCommand, SResultCommand, SInsertCommand, SModifyCommand
 
 골프장
 - (Servlet)
