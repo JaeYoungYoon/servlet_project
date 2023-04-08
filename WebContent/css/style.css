@@ -103,6 +103,24 @@ input[type=number] {
 	padding: 0.3rem;
 }
 
+select {
+	border: 1px solid #ccc;
+	width: 150px;
+	padding: 0.3rem;
+}
+
+option {
+	color: #333;
+	background-color: #fff;
+	font-weight: normal;
+}
+
+option:checked {
+	background-color: #007bff;
+	color: #fff;
+	font-weight: bold;
+}
+
 .btn {
 	padding: 0.4rem 1rem;
 	border-radius: 0.4rem;

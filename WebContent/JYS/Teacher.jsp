@@ -32,15 +32,10 @@
 					<td>${teacher.teacher_regist_date4}</td>
 				</tr>
 			</c:forEach>
-			<tr>
-				<td colspan="5"><a href="list.do">목록으로</a></td>
-			</tr>
-
-			
 		</table>
 
 	</section>
-<%@ include file="footer.jsp"%>
+	<%@ include file="footer.jsp"%>
 
 </body>
 </html>

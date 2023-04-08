@@ -38,9 +38,6 @@
 					<td>${guest.grade}</td>
 				</tr>
 			</c:forEach>
-			<tr>
-				<td colspan="7"><a href="list.do">목록으로</a></td>
-			</tr>
 		</table>
 	</section>
 
