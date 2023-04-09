@@ -24,12 +24,12 @@ create sequence membernum_seq INCREMENT BY 1 START WITH 100001;
 select * from member_tbl_02;
 select * from money_tbl_02;
 
-insert into member_tbl_02 values(membernum_seq.nextval, '±èÇàº¹', '010-1111-2222', '¼­¿ï µ¿´ë¹®±¸ ÈÖ°æ1µ¿', '2015-12-02', 'A', '01');
-insert into member_tbl_02 values(membernum_seq.nextval, 'ÀÌÃàº¹', '010-1111-3333', '¼­¿ï µ¿´ë¹®±¸ ÈÖ°æ2µ¿', '2015-12-06', 'B', '01');
-insert into member_tbl_02 values(membernum_seq.nextval, 'Àå¹ÏÀ½', '010-1111-4444', '¿ï¸ª±º ¿ï¸ªÀ¾ µ¶µµ1¸®', '2015-10-01', 'B', '30');
-insert into member_tbl_02 values(membernum_seq.nextval, 'ÃÖ»ç¶û', '010-1111-5555', '¿ï¸ª±º ¿ï¸ªÀ¾ µ¶µµ2¸®', '2015-11-13', 'A', '30');
-insert into member_tbl_02 values(membernum_seq.nextval, 'ÁøÆòÈ­', '010-1111-6666', 'Á¦ÁÖµµ Á¦ÁÖ½Ã ¿Ü³ª¹«°ñ', '2015-12-25', 'B', '60');
-insert into member_tbl_02 values(membernum_seq.nextval, 'Â÷°ø´Ü', '010-1111-7777', 'Á¦ÁÖµµ Á¦ÁÖ½Ã °¨³ª¹«°ñ', '2015-12-11', 'C', '60');
+insert into member_tbl_02 values(membernum_seq.nextval, 'ê¹€í–‰ë³µ', '010-1111-2222', 'ì„œìš¸ ë™ëŒ€ë¬¸êµ¬ íœ˜ê²½1ë™', '2015-12-02', 'A', '01');
+insert into member_tbl_02 values(membernum_seq.nextval, 'ì´ì¶•ë³µ', '010-1111-3333', 'ì„œìš¸ ë™ëŒ€ë¬¸êµ¬ íœ˜ê²½2ë™', '2015-12-06', 'B', '01');
+insert into member_tbl_02 values(membernum_seq.nextval, 'ì¥ë¯¿ìŒ', '010-1111-4444', 'ìš¸ë¦‰êµ° ìš¸ë¦‰ì ë…ë„1ë¦¬', '2015-10-01', 'B', '30');
+insert into member_tbl_02 values(membernum_seq.nextval, 'ìµœì‚¬ë‘', '010-1111-5555', 'ìš¸ë¦‰êµ° ìš¸ë¦‰ì ë…ë„2ë¦¬', '2015-11-13', 'A', '30');
+insert into member_tbl_02 values(membernum_seq.nextval, 'ì§„í‰í™”', '010-1111-6666', 'ì œì£¼ë„ ì œì£¼ì‹œ ì™¸ë‚˜ë¬´ê³¨', '2015-12-25', 'B', '60');
+insert into member_tbl_02 values(membernum_seq.nextval, 'ì°¨ê³µë‹¨', '010-1111-7777', 'ì œì£¼ë„ ì œì£¼ì‹œ ê°ë‚˜ë¬´ê³¨', '2015-12-11', 'C', '60');
 
 
 insert into money_tbl_02 values(100001, 20160001, 500, 5, 2500, 'A001', '2016-01-01');
