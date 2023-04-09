@@ -4,10 +4,12 @@
 ~ FrontEnd - View ~
 프로젝트 폴더
 - index.jsp (프로젝트 접속)
+- style.css (html 스타일)
 
 투표 (이희복)
 - index.jsp / VCcheck.jsp (후보 조회) / Vote.jsp (투표하기) / VVcheck.jsp (투표 검수 조회) / VCrank.jsp (후보자 등수)
 - topmenu, footer (include)
+- add.js (Vote.jsp에서 내용을 넣지 않으면 alert 하는 기능이 있는 js)
 
 쇼핑몰 (윤재영)
 - main.jsp / add.jsp (회원 등록하기) / list.jsp (회원목록 조회) / result.jsp (매출 조회) / modify.jsp (회원정보 수정)
@@ -15,7 +17,7 @@
 
 골프장 (조유성)
 - MainGolf2.jsp / Teacher.jsp (강사 조회) / CreateAcount.jsp (수강신청) / Guest.jsp (회원 정보) / class_view.jsp (강사 매출 현황)
-- topmenu, footer (include) / action.jsp (수강신청 submit하면 이동하는 곳)
+- topmenu, footer (include)
 
 ======================
 
