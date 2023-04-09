@@ -169,6 +169,7 @@ public class MemberDAO {
 		return rn;
 	}
 
+	/* modify view */
 	public MemberVO view(String strno) {
 		MemberVO member = null;
 
@@ -218,6 +219,7 @@ public class MemberDAO {
 		return member;
 	}
 
+	/* modify */
 	public int modify(String custno, String custname, String phone, String address, String grade, String city) {
 		Connection connection = null;
 		PreparedStatement preparedStatement = null;
