@@ -12,9 +12,8 @@
 	<nav>
 		<ul>
 			<li><a href="./JSP_jy/main.do">윤재영</a></li>
-			<li><a href="./JSP_hb/index.jsp">이희복</a></li>
+			<li><a href="./JSP_hb/index.do">이희복</a></li>
 			<li><a href="./JYS/list.do">조유성</a></li>
-			<li><a href="index.jsp">홈으로</a></li>
 		</ul>
 	</nav>
 	<section>
@@ -27,6 +26,7 @@
 				<li>이희복 : 후보에 대한 유권자 관리 프로그램</li>
 				<li>조유성 : 골프장 회원 관리 프로그램</li>
 			</ul>
+			<p><a href="https://github.com/JaeYoungYoon/servlet_project" target="blank">GitHub Page로 이동</a></p>
 		</div>
 	</section>
 	<footer> Copyright@ All rights reserved. </footer>
